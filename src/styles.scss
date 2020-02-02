@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+*:not(.material-icons) {
+  font-family: 'Century Gothic' !important;
+}
+
+body {
+    padding-top: 56px;
+  }
+  p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 22.0px; font: 15.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 15.0px; font: 15.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.5); -webkit-text-stroke: rgba(255, 255, 255, 0.5); min-height: 18.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px 'Helvetica Neue'; color: #0b61ff; -webkit-text-stroke: #0b61ff; background-color: #ffffff}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px 'Helvetica Neue'; color: #191c1f; -webkit-text-stroke: #191c1f}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 18.0px; font: 12.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; min-height: 15.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 18.0px; font: 12.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px 'Helvetica Neue'; color: #0b61ff; -webkit-text-stroke: #0b61ff}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 9.6px 'Helvetica Neue'; color: #59626a; -webkit-text-stroke: #59626a; background-color: #000000; background-color: rgba(0, 0, 0, 0.027)}
+    li.li5 {margin: 0.0px 3.0px 0.0px 0.0px; line-height: 18.0px; font: 12.0px 'Helvetica Neue'; color: #191c1f; background-color: #ffffff}
+    span.s1 {font-kerning: none; background-color: #272c31}
+    span.s2 {font-kerning: none}
+    span.s3 {font-kerning: none; background-color: #ffffff}
+    span.s4 {font-kerning: none; color: #191c1f; background-color: #ffffff; -webkit-text-stroke: 0px #191c1f}
+    span.s5 {font: 12.0px 'Helvetica Neue'; font-kerning: none; color: #191c1f; -webkit-text-stroke: 0px #191c1f}
+    ul.ul1 {list-style-type: none}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
