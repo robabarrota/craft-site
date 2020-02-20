@@ -1,0 +1,18 @@
+[
+    {
+        "id": 0,
+        "colour": "blue",
+        "material": "silk",
+        "price": "8",
+        "image": "../assets/images/blue_floral.png",
+        "pattern": "blue floral"
+    }, 
+    {
+        "id": 1,
+        "colour": "green",
+        "material": "cloth",
+        "price": "5",
+        "image": "../assets/images/blue_floral.png",
+        "pattern": "solid green"
+    }
+]

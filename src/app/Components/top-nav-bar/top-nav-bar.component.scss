@@ -1,0 +1,16 @@
+::ng-deep .shop-menu {
+    background-color: transparent;
+    border-style: none;
+    outline: none !important;
+    padding-top: .4rem;
+    padding-right: 0.1rem;
+}
+
+::ng-deep .mat-menu-content {
+    background-color: #343a40!important;
+}
+
+.mat-menu-item {
+    color: rgba(255,255,255,.5);
+    font-size: 0.94rem;
+}

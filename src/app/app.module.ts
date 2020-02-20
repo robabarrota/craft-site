@@ -15,7 +15,6 @@ import { HomeComponent } from './Components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-
-declare let Email : any;
 
 @Component({
   selector: 'app-contact',
@@ -10,6 +7,7 @@ declare let Email : any;
 })
 export class ContactComponent implements OnInit {
 
+  mailTo = 'mailto:contact@laurascrunchyshop.com';
   constructor() { }
 
   ngOnInit() {
