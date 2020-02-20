@@ -8,9 +8,10 @@ import { Product } from '../shop-page/Product';
 })
 export class FilterWidgetComponent implements OnInit, OnChanges {
 
-  filterMaterialBoxes = new Map<string, boolean>();
+  filterCheckBoxes = new Map<string, boolean>();
 
   @Input() totalProducts: Product[] = [];
+  @Input() filterProperty: string;
   @Output() applyFilter = new EventEmitter<{propertyName: string, filterMap: Map<string, boolean>}>();
 
   constructor() { }
@@ -24,26 +25,27 @@ export class FilterWidgetComponent implements OnInit, OnChanges {
   }
 
   updateFilterBoxes(){
-    this.filterMaterialBoxes.clear();
+    this.filterCheckBoxes.clear();
     this.totalProducts.forEach((item, index) => {
-      if (!this.filterMaterialBoxes.has(item.material))
-        this.filterMaterialBoxes.set(item.material, false);
+      if (!this.filterCheckBoxes.has(item[this.filterProperty.toLowerCase()]))
+        this.filterCheckBoxes.set(item[this.filterProperty.toLowerCase()], false);
     });
     this.sortFilters();
-    this.applyFilter.emit({propertyName: 'Material', filterMap: this.filterMaterialBoxes});
+    this.applyFilter.emit({propertyName: this.filterProperty, filterMap: this.filterCheckBoxes});
   }
 
   sortFilters() {
-    const sortedList: any = {};
-    Object.keys(this.filterMaterialBoxes)
-      .sort() // or pass a custom compareFn there, faster than using .reverse()
-      .reverse()
-      .forEach(x => sortedList[x] = this.filterMaterialBoxes[x])
-    return sortedList;
+    const checkboxesArray = Array.from(this.filterCheckBoxes);
+    var sortedList = new Map<string, boolean>();
+    checkboxesArray.sort();
+    checkboxesArray.forEach( element => {
+      sortedList.set(element[0], element[1]);
+    });
+    this.filterCheckBoxes = sortedList;
   }
 
   toggleFilter(filter: any, event: any) {
-    this.filterMaterialBoxes.set(filter.key, event.checked);
-    this.applyFilter.emit({propertyName: 'Material', filterMap: this.filterMaterialBoxes});
+    this.filterCheckBoxes.set(filter.key, event.checked);
+    this.applyFilter.emit({propertyName: this.filterProperty, filterMap: this.filterCheckBoxes});
   }
 }

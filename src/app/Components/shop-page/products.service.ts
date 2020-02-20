@@ -1,28 +1,32 @@
 import { Injectable } from '@angular/core';
-import scrunchydata from './../../../assets/products/scrunchydata.json';
-import pouchdata from './../../../assets/products/pouchdata.json';
 import productdataJson from './../../../assets/products/productdata.json';
+import productpropertiesJson from './../../../assets/products/productproperties.json';
 
 import { Product } from './Product.js';
+import { ProductProperty } from './ProductProperty.js';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
   productdata: Product[] = productdataJson;
+  productproperties: ProductProperty[] = productpropertiesJson;
 
   constructor() {}
 
   getScrunchyData() : Product[] {
-    
     return this.productdata.filter(p => p.type == 'scrunchy');
   }
 
-  getPouchData() : Product[]{
+  getPouchData() : Product[] {
     return this.productdata.filter(p => p.type == 'pouch');
   }
 
-  getBandanaData() : Product[]{
+  getBandanaData() : Product[] {
     return this.productdata.filter(p => p.type == 'bandana');
+  }
+
+  getFilterableProperties() : ProductProperty[] {
+    return this.productproperties.filter(p => p.filterable == true);
   }
 }

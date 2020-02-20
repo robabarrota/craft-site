@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ActivationEnd } from '@angular/router';
 import { ProductsService } from './products.service';
 import { Product } from './Product';
+import { ProductProperty } from './ProductProperty';
 
 @Component({
   selector: 'app-shop-page',
@@ -12,6 +13,8 @@ export class ShopPageComponent implements OnInit {
   productData = new Map<string, Product[]>();
   displayProducts: Product[] = [];
   totalProducts: Product[] = [];
+  filters: ProductProperty[] = [];
+  activeFilters = new Map<string, Map<string, boolean>>();
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -28,6 +31,7 @@ export class ShopPageComponent implements OnInit {
         "Bandanas",
         productsService.getBandanaData()
       );
+      this.filters = productsService.getFilterableProperties();
     }
 
   ngOnInit() {
@@ -52,12 +56,33 @@ export class ShopPageComponent implements OnInit {
       if (v == true)
         filterChecked = true;
     });
-    var filteredProducts = filterChecked? 
-    this.totalProducts.filter((p) => {
-      return filterObject.filterMap.get(p.material) == true
-    }) :
-    this.totalProducts;
+    var filteredProducts = this.totalProducts;
 
+    this.activeFilters.set(filterObject.propertyName, filterObject.filterMap);
+
+    this.activeFilters.forEach((value: Map<string, boolean>, key: string) => {
+      filteredProducts = this.filterByProperty(key, filteredProducts);
+    });
     this.displayProducts = filteredProducts;
+  }
+
+  filterByProperty(property: string, products: Product[]) {
+    var filtersForProperty = this.activeFilters.get(property);
+    var filteredResult = products;
+
+    var propertyFiltered = false;
+    filtersForProperty.forEach((v, k) => {
+      if (v == true)
+      propertyFiltered = true;
+    });
+  
+    if (propertyFiltered) {
+      filteredResult = products.filter((product) => {
+        return filtersForProperty.get(product[property.toLowerCase()]) == true;
+      });
+    }
+
+    return filteredResult;
+    
   }
 }
