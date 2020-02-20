@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg-3">
 
-        <app-filter-widget [totalProducts]="totalProducts" (productsFiltered)="displayFilteredProducts($event)"></app-filter-widget>
+        <app-filter-widget [totalProducts]="totalProducts" (applyFilter)="applyFilter($event)"></app-filter-widget>
 
     </div>
     <!-- /.col-lg-3 -->

@@ -46,7 +46,18 @@ export class ShopPageComponent implements OnInit {
     });
   }
 
-  displayFilteredProducts(filteredProducts: Product[]) {
+  applyFilter(filterObject: any) {
+    var filterChecked = false;
+    filterObject.filterMap.forEach((v, k) => {
+      if (v == true)
+        filterChecked = true;
+    });
+    var filteredProducts = filterChecked? 
+    this.totalProducts.filter((p) => {
+      return filterObject.filterMap.get(p.material) == true
+    }) :
+    this.totalProducts;
+
     this.displayProducts = filteredProducts;
   }
 }

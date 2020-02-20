@@ -11,7 +11,7 @@ export class FilterWidgetComponent implements OnInit, OnChanges {
   filterMaterialBoxes = new Map<string, boolean>();
 
   @Input() totalProducts: Product[] = [];
-  @Output() productsFiltered = new EventEmitter<Product[]>();
+  @Output() applyFilter = new EventEmitter<{propertyName: string, filterMap: Map<string, boolean>}>();
 
   constructor() { }
 
@@ -30,7 +30,7 @@ export class FilterWidgetComponent implements OnInit, OnChanges {
         this.filterMaterialBoxes.set(item.material, false);
     });
     this.sortFilters();
-    this.applyFilter();
+    this.applyFilter.emit({propertyName: 'Material', filterMap: this.filterMaterialBoxes});
   }
 
   sortFilters() {
@@ -44,22 +44,6 @@ export class FilterWidgetComponent implements OnInit, OnChanges {
 
   toggleFilter(filter: any, event: any) {
     this.filterMaterialBoxes.set(filter.key, event.checked);
-    this.applyFilter();
-  }
-
-  applyFilter() {
-    var filterChecked = false;
-    this.filterMaterialBoxes.forEach((v, k) => {
-      if (v == true)
-        filterChecked = true;
-    });
-    var filteredProducts = filterChecked? 
-    this.totalProducts.filter((p) => {
-      return this.filterMaterialBoxes.get(p.material) == true
-    }) :
-    this.totalProducts;
-
-    this.productsFiltered.emit(filteredProducts);
-
+    this.applyFilter.emit({propertyName: 'Material', filterMap: this.filterMaterialBoxes});
   }
 }
