@@ -1,22 +1,7 @@
 <div class="row">
     <div class="col-lg-3">
 
-        <h1 class="my-4">Filter</h1>
-        <!-- <div class="list-group">
-            <button mat-button class="list-group-item">Silk</button>
-            <button mat-button class="list-group-item">Velvet</button>
-            <button mat-button class="list-group-item">Stretch</button>
-        </div> -->
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Material
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                    <mat-checkbox *ngFor="let filter of filterMaterialBoxes | keyvalue; let i = index" class="mat-menu-item" (change)="toggleFilter(filter, $event)" [checked]="filter.value"> {{ filter.key }}</mat-checkbox>
-            </mat-expansion-panel>
-        </mat-accordion>
+        <app-filter-widget [totalProducts]="totalProducts" (productsFiltered)="displayFilteredProducts($event)"></app-filter-widget>
 
     </div>
     <!-- /.col-lg-3 -->

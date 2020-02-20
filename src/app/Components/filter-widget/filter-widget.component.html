@@ -1,0 +1,11 @@
+<h1 class="my-4">Filter</h1>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Material
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+            <mat-checkbox *ngFor="let filter of filterMaterialBoxes | keyvalue; let i = index" class="mat-menu-item" (change)="toggleFilter(filter, $event)" [checked]="filter.value"> {{ filter.key }}</mat-checkbox>
+    </mat-expansion-panel>
+</mat-accordion>

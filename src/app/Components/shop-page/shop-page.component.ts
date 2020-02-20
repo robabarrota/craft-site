@@ -12,8 +12,6 @@ export class ShopPageComponent implements OnInit {
   productData = new Map<string, Product[]>();
   displayProducts: Product[] = [];
   totalProducts: Product[] = [];
-  filterMaterialBoxes = new Map<string, boolean>();
-  productFilters: string[] = [];
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -38,7 +36,6 @@ export class ShopPageComponent implements OnInit {
       this.totalProducts = this.productData.get(u[1].path);
       this.displayProducts = this.totalProducts;
     });
-    this.updateFilterBoxes();
 
     // Update products within shop page
     this.router.events.subscribe((val) => { 
@@ -46,44 +43,10 @@ export class ShopPageComponent implements OnInit {
         this.totalProducts = this.productData.get(val.snapshot.params.Product); 
         this.displayProducts = this.totalProducts;
       }
-      this.updateFilterBoxes();
-      });
-  }
-
-  updateFilterBoxes(){
-    this.filterMaterialBoxes.clear();
-    this.totalProducts.forEach((item, index) => {
-      if (!this.filterMaterialBoxes.has(item.material))
-        this.filterMaterialBoxes.set(item.material, false);
     });
-    this.sortFilters();
-    this.applyFilter();
   }
 
-  sortFilters() {
-    const sortedList: any = {};
-    Object.keys(this.filterMaterialBoxes)
-      .sort() // or pass a custom compareFn there, faster than using .reverse()
-      .reverse()
-      .forEach(x => sortedList[x] = this.filterMaterialBoxes[x])
-    return sortedList;
-  }
-
-  toggleFilter(filter: any, event: any) {
-    this.filterMaterialBoxes.set(filter.key, event.checked);
-    this.applyFilter();
-  }
-
-  applyFilter() {
-    var filterChecked = false;
-    this.filterMaterialBoxes.forEach((v, k) => {
-      if (v == true)
-        filterChecked = true;
-    });
-    this.displayProducts = filterChecked? 
-    this.totalProducts.filter((p) => {
-      return this.filterMaterialBoxes.get(p.material) == true
-    }) :
-    this.totalProducts;
+  displayFilteredProducts(filteredProducts: Product[]) {
+    this.displayProducts = filteredProducts;
   }
 }
