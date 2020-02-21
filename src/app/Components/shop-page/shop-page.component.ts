@@ -15,11 +15,10 @@ export class ShopPageComponent implements OnInit {
   totalProducts: Product[] = [];
   filters: ProductProperty[] = [];
   activeFilters = new Map<string, Map<string, boolean>>();
-  currentProductPage: any;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
-    productsService: ProductsService) {
+    private productsService: ProductsService) {
       this.productData.set(
         "Scrunchies",
         productsService.getScrunchyData()
@@ -36,25 +35,29 @@ export class ShopPageComponent implements OnInit {
         "All",
         productsService.getAllProducts()
       );
-      this.filters = productsService.getFilterableProperties();
     }
 
   ngOnInit() {
     // Set products on shop page init
-    this.route.url.subscribe((u) => {
-      this.currentProductPage = u[1].path;
-      this.totalProducts = this.productData.get(u[1].path);
-      this.displayProducts = this.totalProducts;
+    this.route.url.subscribe((url) => {
+      this.initialize(url[1].path);
     });
 
     // Update products within shop page
     this.router.events.subscribe((val) => { 
       if (val instanceof ActivationEnd) {
-        this.currentProductPage = val.snapshot.params.Product;
-        this.totalProducts = this.productData.get(val.snapshot.params.Product); 
-        this.displayProducts = this.totalProducts;
+        this.initialize(val.snapshot.params.Product);
       }
     });
+  }
+
+  initialize(productPath: string) {
+    this.totalProducts = this.productData.get(productPath); 
+    this.displayProducts = this.totalProducts;
+    this.filters = this.productsService.getFilterableProperties();
+    // Don't want to filter by type when browsing individual types
+    if (productPath != "All")
+      this.filters = this.filters.filter(f => f.name != "Type");
   }
 
   applyFilter(filterObject: any) {
