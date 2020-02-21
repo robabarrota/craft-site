@@ -10,7 +10,7 @@
             <a class="nav-link" [routerLink]="['/Home']" [routerLinkActive]="'active'">Home</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link shop-menu" [matMenuTriggerFor]="menu">Shop<mat-icon inline=true>arrow_drop_down</mat-icon></button>
+            <button class="nav-link shop-menu" [matMenuTriggerFor]="menu">Shop<mat-icon inline=true class="shop-arrow">arrow_drop_down</mat-icon></button>
             <mat-menu #menu="matMenu">
               <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Scrunchies']" [routerLinkActive]="'active'">Scrunchies</a>
               <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Pouches']" [routerLinkActive]="'active'">Pouches</a>

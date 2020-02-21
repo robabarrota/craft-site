@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import productdataJson from './../../../assets/products/productdata.json';
-import productpropertiesJson from './../../../assets/products/productproperties.json';
+import productdataJson from '../../../assets/products/productdata.json';
+import productpropertiesJson from '../../../assets/products/productproperties.json';
 
-import { Product } from './Product.js';
-import { ProductProperty } from './ProductProperty.js';
+import { Product } from '../../Models/Product.js';
+import { ProductProperty } from '../../Models/ProductProperty.js';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class ProductsService {
   productproperties: ProductProperty[] = productpropertiesJson;
 
   constructor() {}
-
+  
   getScrunchyData() : Product[] {
     return this.productdata.filter(p => p.type == 'scrunchy');
   }

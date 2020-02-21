@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges, EventEmitter, Output } from '@angular/core';
-import { Product } from '../shop-page/Product';
+import { Product } from '../../Models/Product';
+import { Router, ActivationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-filter-widget',
@@ -14,9 +15,12 @@ export class FilterWidgetComponent implements OnInit, OnChanges {
   @Input() filterProperty: string;
   @Output() applyFilter = new EventEmitter<{propertyName: string, filterMap: Map<string, boolean>}>();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.router.events.subscribe((val) => { 
+      this.updateFilterBoxes();
+    });
     this.updateFilterBoxes();
   }
 

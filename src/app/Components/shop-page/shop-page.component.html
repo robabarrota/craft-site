@@ -1,15 +1,12 @@
 <div class="row">
     <div class="col-lg-3">
-        <h1 class="my-4">Filter</h1>
+        <h1 class="my-4">Filters</h1>
         <app-filter-widget *ngFor="let filter of filters" [filterProperty]="filter.name" [totalProducts]="totalProducts" (applyFilter)="applyFilter($event)"></app-filter-widget>
-
+        <button mat-button class="clear-filter-button" (click)="resetFilters()">Clear Filters</button>
     </div>
     <!-- /.col-lg-3 -->
 
     <div class="col-lg-9">
-
-        <app-carousel-widget></app-carousel-widget>
-
         <div class="row">
             
             <div *ngFor="let product of displayProducts; let i = index" class="col-lg-4 col-md-6 mb-4">

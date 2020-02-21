@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ActivationEnd } from '@angular/router';
-import { ProductsService } from './products.service';
-import { Product } from './Product';
-import { ProductProperty } from './ProductProperty';
+import { ProductsService } from '../../Services/products/products.service';
+import { Product } from '../../Models/Product';
+import { ProductProperty } from '../../Models/ProductProperty';
 
 @Component({
   selector: 'app-shop-page',
@@ -15,6 +15,7 @@ export class ShopPageComponent implements OnInit {
   totalProducts: Product[] = [];
   filters: ProductProperty[] = [];
   activeFilters = new Map<string, Map<string, boolean>>();
+  currentProductPage: any;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -37,6 +38,7 @@ export class ShopPageComponent implements OnInit {
   ngOnInit() {
     // Set products on shop page init
     this.route.url.subscribe((u) => {
+      this.currentProductPage = u[1].path;
       this.totalProducts = this.productData.get(u[1].path);
       this.displayProducts = this.totalProducts;
     });
@@ -44,6 +46,7 @@ export class ShopPageComponent implements OnInit {
     // Update products within shop page
     this.router.events.subscribe((val) => { 
       if (val instanceof ActivationEnd) {
+        this.currentProductPage = val.snapshot.params.Product;
         this.totalProducts = this.productData.get(val.snapshot.params.Product); 
         this.displayProducts = this.totalProducts;
       }
@@ -82,7 +85,10 @@ export class ShopPageComponent implements OnInit {
       });
     }
 
-    return filteredResult;
-    
+    return filteredResult; 
+  }
+
+  resetFilters() {
+    this.router.navigate([this.router.url]);
   }
 }
