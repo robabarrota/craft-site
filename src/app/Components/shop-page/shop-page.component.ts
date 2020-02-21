@@ -61,11 +61,6 @@ export class ShopPageComponent implements OnInit {
   }
 
   applyFilter(filterObject: any) {
-    var filterChecked = false;
-    filterObject.filterMap.forEach((v, k) => {
-      if (v == true)
-        filterChecked = true;
-    });
     var filteredProducts = this.totalProducts;
 
     this.activeFilters.set(filterObject.propertyName, filterObject.filterMap);
