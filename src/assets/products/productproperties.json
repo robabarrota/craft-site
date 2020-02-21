@@ -2,7 +2,7 @@
     {
         "id": 0,
         "name": "Type",
-        "filterable": false
+        "filterable": true
     }, 
     {
         "id": 1,

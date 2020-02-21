@@ -32,6 +32,10 @@ export class ShopPageComponent implements OnInit {
         "Bandanas",
         productsService.getBandanaData()
       );
+      this.productData.set(
+        "All",
+        productsService.getAllProducts()
+      );
       this.filters = productsService.getFilterableProperties();
     }
 

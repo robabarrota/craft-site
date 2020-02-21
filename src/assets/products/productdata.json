@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "type": "pouch",
+        "type": "Pouch",
         "colour": "White",
         "material": "Cotton",
         "price": "5",
@@ -10,7 +10,7 @@
     }, 
     {
         "id": 1,
-        "type": "pouch",
+        "type": "Pouch",
         "colour": "Blue",
         "material": "Polyester-Spandex",
         "price": "5",
@@ -19,7 +19,7 @@
     },
     {
         "id": 2,
-        "type": "pouch",
+        "type": "Pouch",
         "colour": "Red",
         "material": "Flannel",
         "price": "5",
@@ -28,7 +28,7 @@
     }, 
     {
         "id": 3,
-        "type": "scrunchy",
+        "type": "Scrunchy",
         "colour": "Blue",
         "material": "Flannel",
         "price": "5",
@@ -37,7 +37,7 @@
     }, 
     {
         "id": 4,
-        "type": "scrunchy",
+        "type": "Scrunchy",
         "colour": "White",
         "material": "Cotton",
         "price": "5",
@@ -46,7 +46,7 @@
     },
     {
         "id": 5,
-        "type": "scrunchy",
+        "type": "Scrunchy",
         "colour": "Blue",
         "material": "Polyester-Spandex",
         "price": "5",
@@ -55,7 +55,7 @@
     },
     {
         "id": 6,
-        "type": "bandana",
+        "type": "Bandana",
         "colour": "Red",
         "material": "Cotton",
         "price": "5",
@@ -64,7 +64,7 @@
     },
     {
         "id": 7,
-        "type": "bandana",
+        "type": "Bandana",
         "colour": "White",
         "material": "Cotton",
         "price": "5",
@@ -73,7 +73,7 @@
     },
     {
         "id": 7,
-        "type": "bandana",
+        "type": "Bandana",
         "colour": "Black",
         "material": "Cotton",
         "price": "5",

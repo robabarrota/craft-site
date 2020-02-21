@@ -13,17 +13,21 @@ export class ProductsService {
   productproperties: ProductProperty[] = productpropertiesJson;
 
   constructor() {}
-  
+
+  getAllProducts() : Product[] {
+    return this.productdata;
+  }
+
   getScrunchyData() : Product[] {
-    return this.productdata.filter(p => p.type == 'scrunchy');
+    return this.productdata.filter(p => p.type == 'Scrunchy');
   }
 
   getPouchData() : Product[] {
-    return this.productdata.filter(p => p.type == 'pouch');
+    return this.productdata.filter(p => p.type == 'Pouch');
   }
 
   getBandanaData() : Product[] {
-    return this.productdata.filter(p => p.type == 'bandana');
+    return this.productdata.filter(p => p.type == 'Bandana');
   }
 
   getFilterableProperties() : ProductProperty[] {
