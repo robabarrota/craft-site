@@ -3,6 +3,8 @@ import { ActivatedRoute, Router, ActivationEnd } from '@angular/router';
 import { ProductsService } from '../../Services/products/products.service';
 import { Product } from '../../Models/Product';
 import { ProductProperty } from '../../Models/ProductProperty';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-shop-page',
@@ -18,7 +20,8 @@ export class ShopPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     private router: Router,
-    private productsService: ProductsService) {
+    private productsService: ProductsService,
+    public dialog: MatDialog) {
       this.productData.set(
         "Scrunchies",
         productsService.getScrunchyData()
@@ -92,5 +95,16 @@ export class ShopPageComponent implements OnInit {
 
   resetFilters() {
     this.router.navigate([this.router.url]);
+  }
+
+  viewDetails(pid: number) {
+    let dialogRef = this.dialog.open(ProductDetailsComponent, {
+      height: '400px',
+      width: '600px',
+      data: {
+        pid: pid
+      },
+      panelClass: 'my-dialog'
+    });
   }
 }

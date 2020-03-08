@@ -40,6 +40,7 @@ import { ProductDetailsComponent } from './Components/product-details/product-de
     AppMaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ProductDetailsComponent]
 })
 export class AppModule { }
