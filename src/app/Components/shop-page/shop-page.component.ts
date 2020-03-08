@@ -99,8 +99,8 @@ export class ShopPageComponent implements OnInit {
 
   viewDetails(pid: number) {
     let dialogRef = this.dialog.open(ProductDetailsComponent, {
-      height: '400px',
-      width: '600px',
+      height: '80%',
+      width: '80%',
       data: {
         pid: pid
       },

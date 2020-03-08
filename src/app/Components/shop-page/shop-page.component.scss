@@ -11,3 +11,19 @@
     background: #343a4038;
     outline: none;
 }
+
+.product-details-link {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.product-details-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.product-image {
+    cursor: pointer;
+}
