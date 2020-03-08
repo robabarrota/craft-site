@@ -15,6 +15,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { FilterWidgetComponent } from './Components/filter-widget/filter-widget.component';
+import { ProductDetailsComponent } from './Components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FilterWidgetComponent } from './Components/filter-widget/filter-widget.
     ShopPageComponent,
     AboutComponent,
     HomeComponent,
-    FilterWidgetComponent
+    FilterWidgetComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
