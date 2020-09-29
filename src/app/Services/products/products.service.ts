@@ -30,6 +30,10 @@ export class ProductsService {
     return this.productdata.filter(p => p.type == 'Bandana');
   }
 
+  getMaskData() : Product[] {
+    return this.productdata.filter(p => p.type == 'Mask');
+  }
+
   getFilterableProperties() : ProductProperty[] {
     return this.productproperties.filter(p => p.filterable == true);
   }

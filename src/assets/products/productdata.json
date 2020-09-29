@@ -39,7 +39,7 @@
         "material": "Cotton",
         "price": "5",
         "images": [
-            "../assets/images/TESTIMAGE.png"
+            "../assets/images/p3.png"
         ],
         "pattern": "Floral"
     }, 
@@ -94,6 +94,17 @@
         "colour": "Black",
         "material": "Cotton",
         "price": "5",
+        "images": [
+            "../assets/images/p8.png"
+        ],
+        "pattern": "Crossbones"
+    },
+    {
+        "id": 8,
+        "type": "Mask",
+        "colour": "Black",
+        "material": "Cotton",
+        "price": "10",
         "images": [
             "../assets/images/p8.png"
         ],

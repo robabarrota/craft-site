@@ -35,6 +35,10 @@ export class ShopPageComponent implements OnInit {
         productsService.getBandanaData()
       );
       this.productData.set(
+        "Masks",
+        productsService.getMaskData()
+      );
+      this.productData.set(
         "All",
         productsService.getAllProducts()
       );
