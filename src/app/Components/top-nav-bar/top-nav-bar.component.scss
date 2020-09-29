@@ -46,3 +46,7 @@
 .panel-title {
     margin-right: 4px;
 }
+
+::ng-deep .mat-expansion-indicator { 
+    padding-bottom: 5px;
+}
