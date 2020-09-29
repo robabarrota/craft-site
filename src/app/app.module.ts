@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { FilterWidgetComponent } from './Components/filter-widget/filter-widget.component';
 import { ProductDetailsComponent } from './Components/product-details/product-details.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { ProductDetailsComponent } from './Components/product-details/product-de
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],

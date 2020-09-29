@@ -10,14 +10,19 @@
             <a class="nav-link" [routerLink]="['/Home']" [routerLinkActive]="'active'">Home</a>
           </li>
           <li class="nav-item">
-            <button class="nav-link shop-menu" [matMenuTriggerFor]="menu">Shop<mat-icon inline=true class="shop-arrow">arrow_drop_down</mat-icon></button>
-            <mat-menu #menu="matMenu">
-              <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Scrunchies']" [routerLinkActive]="'active'">Scrunchies</a>
-              <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Pouches']" [routerLinkActive]="'active'">Pouches</a>
-              <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Bandanas']" [routerLinkActive]="'active'">Bandanas</a>
-              <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Masks']" [routerLinkActive]="'active'">Masks</a>
-              <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'All']" [routerLinkActive]="'active'">All</a>
-            </mat-menu>
+            <!-- <button class="nav-link shop-menu" [matMenuTriggerFor]="menu">Shop<mat-icon inline=true class="shop-arrow">arrow_drop_down</mat-icon></button> -->
+              <mat-expansion-panel class="expansion-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false" #panel (mouseenter)="panel.open()" (mouseleave)="panel.close()">
+                <mat-expansion-panel-header class="nav-header">
+                  <mat-panel-title class="nav-link panel-title">
+                    Shop
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Scrunchies']" [routerLinkActive]="'active'">Scrunchies</a>
+                <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Pouches']" [routerLinkActive]="'active'">Pouches</a>
+                <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Bandanas']" [routerLinkActive]="'active'">Bandanas</a>
+                <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Masks']" [routerLinkActive]="'active'">Masks</a>
+                <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'All']" [routerLinkActive]="'active'">All</a>
+              </mat-expansion-panel>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/About']" [routerLinkActive]="'active'">About</a>

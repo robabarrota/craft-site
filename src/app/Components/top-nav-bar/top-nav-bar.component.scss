@@ -22,3 +22,27 @@
 .shop-arrow {
     font-size: 16px !important;
 }
+
+::ng-deep .mat-expansion-panel-body {
+    position: absolute !important;
+    background-color: #343a40eb!important;
+}
+
+.expansion-panel {
+    background-color: #343a40eb;
+    box-shadow: none;
+}
+
+.nav-header {
+    height: 40px !important;
+    font-size: inherit;
+    padding: 0px 8px;
+}
+
+::ng-deep .mat-expansion-indicator::after, .mat-expansion-panel-header-description {
+    color: rgba(255,255,255,.5)
+}
+
+.panel-title {
+    margin-right: 4px;
+}
