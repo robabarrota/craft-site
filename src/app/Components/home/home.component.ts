@@ -12,7 +12,7 @@ export class HomeComponent {
   slides: string[] = this.dataService.getAllCarouselImages();
 
   constructor(private dataService: DataService) { }
-  @ViewChild(CarouselWidgetComponent) carousel: CarouselWidgetComponent;
+  @ViewChild(CarouselWidgetComponent, {static: false}) carousel: CarouselWidgetComponent;
 
   animationType = AnimationType.Scale;
 }
