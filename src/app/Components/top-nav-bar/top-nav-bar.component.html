@@ -14,7 +14,7 @@
               <mat-expansion-panel class="expansion-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false" #panel (mouseenter)="panel.open()" (mouseleave)="panel.close()">
                 <mat-expansion-panel-header class="nav-header">
                   <mat-panel-title class="nav-link panel-title">
-                    Shop
+                    <a class="nav-link" [routerLink]="['/Shop', 'All']" [routerLinkActive]="'active'">Shop</a>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                   <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Scrunchies']" [routerLinkActive]="'active'">Scrunchies</a>
