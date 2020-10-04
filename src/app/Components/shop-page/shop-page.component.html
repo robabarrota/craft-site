@@ -16,10 +16,9 @@
                         <h4 class="card-title">
                         <a (click)="viewDetails(product.id)" class="product-details-link">{{product.pattern}}</a>
                         </h4>
-                        <h5>${{ product.price }}</h5>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">{{product.type}}, {{product.colour}}, {{product.material}}</small>
+                        <small class="text-muted">${{ product.price }}</small>
                     </div>
                 </div>
             </div>
