@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bar fixed-top">
     <div class="container">
       <a class="navbar-brand" [routerLink]="['/Home']">Laura's Sew Shop</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
               <mat-expansion-panel class="expansion-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false" #panel (mouseenter)="panel.open()" (mouseleave)="panel.close()">
                 <mat-expansion-panel-header class="nav-header">
                   <mat-panel-title class="nav-link panel-title">
-                    Shop
+                    <a class="nav-link" [routerLink]="['/Shop', 'All']" [routerLinkActive]="'active'">Shop</a>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                   <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Scrunchies']" [routerLinkActive]="'active'">Scrunchies</a>

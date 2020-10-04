@@ -7,7 +7,7 @@
 }
 
 ::ng-deep .mat-menu-content {
-    background-color: #343a40eb!important;
+    background-color: darkgray !important;
 }
 
 ::ng-deep .mat-menu-panel {
@@ -25,11 +25,11 @@
 
 ::ng-deep .expansion-panel .mat-expansion-panel-body  {
     position: absolute !important;
-    background-color: #343a40eb!important;
+    background-color: darkgray;
 }
 
 .expansion-panel {
-    background-color: #343a40eb;
+    background-color: darkgray;
     box-shadow: none;
 }
 

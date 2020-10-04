@@ -24,7 +24,7 @@ body {
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; padding-bottom: 82px; }
 
 .cdk-overlay-pane.my-dialog {
   position: relative!important;
@@ -44,4 +44,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .carousel-height {
   height: 280px !important;
+}
+
+.bar {
+  background-color: darkgray;
 }
