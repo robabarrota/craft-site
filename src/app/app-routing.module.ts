@@ -4,6 +4,7 @@ import { ShopPageComponent } from './Components/shop-page/shop-page.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { AboutComponent } from './Components/about/about.component';
 import { HomeComponent } from './Components/home/home.component';
+import { FaqComponent } from './Components/faq/faq.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path:'About',
     component: AboutComponent
+  },
+  {
+    path:'FAQ',
+    component: FaqComponent
   },
   { path: '**',
     redirectTo: 'Home'

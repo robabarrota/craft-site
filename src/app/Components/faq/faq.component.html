@@ -1,0 +1,12 @@
+<h1>FAQ</h1>
+
+<mat-accordion>
+    <mat-expansion-panel class="filter-panel" *ngFor="let faq of FAQs; let i = index">
+        <mat-expansion-panel-header >
+            <mat-panel-title>
+                {{faq.question}}
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{faq.answer}}</p>
+    </mat-expansion-panel>
+</mat-accordion>

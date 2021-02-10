@@ -17,6 +17,7 @@ import { AppMaterialModule } from './app-material/app-material.module';
 import { FilterWidgetComponent } from './Components/filter-widget/filter-widget.component';
 import { ProductDetailsComponent } from './Components/product-details/product-details.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { FaqComponent } from './Components/faq/faq.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     AboutComponent,
     HomeComponent,
     FilterWidgetComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
