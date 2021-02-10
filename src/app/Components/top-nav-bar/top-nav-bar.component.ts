@@ -13,4 +13,10 @@ export class TopNavBarComponent implements OnInit {
   panelOpenState = false;
   ngOnInit() {}
 
+  ToggleNavBar () {
+    let element: HTMLElement = document.getElementsByClassName( 'navbar-toggler' )[ 0 ] as HTMLElement;
+    if ( element.getAttribute( 'aria-expanded' ) == 'true' ) {
+        element.click();
+    }
+  }
 }

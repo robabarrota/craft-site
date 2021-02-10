@@ -1,37 +1,37 @@
 <nav class="navbar navbar-expand-lg navbar-dark bar fixed-top">
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/Home']">Laura's Sew Shop</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" [routerLink]="['/Home']" (click)="ToggleNavBar()">Laura's Sew Shop</a>
+      <button class="navbar-toggler" type="button" #toggler data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/Home']" [routerLinkActive]="'active'">Home</a>
+            <a class="nav-link" [routerLink]="['/Home']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">Home</a>
           </li>
           <li class="nav-item">
             <!-- <button class="nav-link shop-menu" [matMenuTriggerFor]="menu">Shop<mat-icon inline=true class="shop-arrow">arrow_drop_down</mat-icon></button> -->
               <mat-expansion-panel class="expansion-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false" #panel (mouseenter)="panel.open()" (mouseleave)="panel.close()">
                 <mat-expansion-panel-header class="nav-header" [collapsedHeight]="'40px'" [expandedHeight]="'40px'">
                   <mat-panel-title class="nav-link panel-title">
-                    <a class="nav-link" [routerLink]="['/Shop', 'All']" [routerLinkActive]="'active'">Shop</a>
+                    <a class="nav-link" [routerLink]="['/Shop', 'All']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">Shop</a>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Scrunchies']" [routerLinkActive]="'active'">Scrunchies</a>
-                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Pouches']" [routerLinkActive]="'active'">Pouches</a>
-                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Bandanas']" [routerLinkActive]="'active'">Bandanas</a>
-                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Masks']" [routerLinkActive]="'active'">Masks</a>
-                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'All']" [routerLinkActive]="'active'">All</a>
+                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Scrunchies']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">Scrunchies</a>
+                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Pouches']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">Pouches</a>
+                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Bandanas']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">Bandanas</a>
+                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'Masks']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">Masks</a>
+                  <a class="nav-link mat-menu-item" [routerLink]="['/Shop', 'All']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">All</a>
               </mat-expansion-panel>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/About']" [routerLinkActive]="'active'">About</a>
+            <a class="nav-link" [routerLink]="['/About']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/Contact']" [routerLinkActive]="'active'">Contact</a>
+            <a class="nav-link" [routerLink]="['/Contact']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/FAQ']" [routerLinkActive]="'active'">FAQ</a>
+            <a class="nav-link" [routerLink]="['/FAQ']" [routerLinkActive]="'active'" (click)="ToggleNavBar()">FAQ</a>
           </li>
         </ul>
       </div>
