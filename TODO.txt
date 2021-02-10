@@ -1,0 +1,2 @@
+1. Improve functionality on mobile
+2. Fix font issue on Safari
