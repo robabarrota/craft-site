@@ -1,2 +1,2 @@
-1. Improve functionality on mobile
+1. Improve footer in shopping area on desktop and mobile
 2. Add candles

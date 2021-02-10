@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row shop-page">
     <div class="col-lg-3">
         <h1 class="my-4">Filters</h1>
         <app-filter-widget *ngFor="let filter of filters" [filterProperty]="filter.name" [totalProducts]="totalProducts" (applyFilter)="applyFilter($event)"></app-filter-widget>
