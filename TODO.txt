@@ -1,3 +1,4 @@
 1. Improve footer in shopping area on desktop and mobile
 2. Add candles
-3. Scale down mobile shop page
+3. Scale down mobile shop page panels
+4. Center carousel on home page

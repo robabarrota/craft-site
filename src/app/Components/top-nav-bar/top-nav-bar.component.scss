@@ -50,3 +50,7 @@
 ::ng-deep .mat-expansion-indicator { 
     padding-bottom: 5px;
 }
+
+.navbar-collapse {
+    max-height: 200px !important;
+}
