@@ -1,15 +1,21 @@
 <div class="row shop-page">
     <div class="col-lg-3">
-        <h1 class="my-4">Filters</h1>
-        <app-filter-widget *ngFor="let filter of filters" [filterProperty]="filter.name" [totalProducts]="totalProducts" (applyFilter)="applyFilter($event)"></app-filter-widget>
-        <button mat-button class="clear-filter-button" (click)="resetFilters()">Clear Filters</button>
+        <mat-expansion-panel class="filter-panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false" #panel (mouseenter)="panel.open()" (mouseleave)="panel.close()">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Filters
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-filter-widget *ngFor="let filter of filters" [filterProperty]="filter.name" [totalProducts]="totalProducts" (applyFilter)="applyFilter($event)"></app-filter-widget>
+            <button mat-button class="clear-filter-button" (click)="resetFilters()">Clear Filters</button>
+        </mat-expansion-panel>
     </div>
     <!-- /.col-lg-3 -->
 
     <div class="col-lg-9">
         <div class="row">
             
-            <div *ngFor="let product of displayProducts; let i = index" class="col-lg-4 col-md-6 mb-4">
+            <div *ngFor="let product of displayProducts; let i = index" class="col-lg-4 col-md-6 mb-4 shop-product">
                 <div class="card h-100 product-card">
                     <a (click)="viewDetails(product.id)" class="product-image"><img class="card-img-top" [src]="product.images[0]" alt=""></a>
                     <div class="card-body">
