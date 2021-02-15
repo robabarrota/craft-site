@@ -39,6 +39,10 @@ export class ShopPageComponent implements OnInit {
         productsService.getMaskData()
       );
       this.productData.set(
+        "Candles",
+        productsService.getCandleData()
+      );
+      this.productData.set(
         "All",
         productsService.getAllProducts()
       );
@@ -61,10 +65,7 @@ export class ShopPageComponent implements OnInit {
   initialize(productPath: string) {
     this.totalProducts = this.productData.get(productPath); 
     this.displayProducts = this.totalProducts;
-    this.filters = this.productsService.getFilterableProperties();
-    // Don't want to filter by type when browsing individual types
-    if (productPath != "All")
-      this.filters = this.filters.filter(f => f.name != "Type");
+    this.filters = this.productsService.getFilterableProperties(productPath);
   }
 
   applyFilter(filterObject: any) {

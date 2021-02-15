@@ -4,6 +4,6 @@ export class Product {
     colour: string;
     material: string;
     price: string;
-    image: string;
+    images: string[];
     pattern: string;
 }

@@ -31,7 +31,7 @@ export class FilterWidgetComponent implements OnInit, OnChanges {
   updateFilterBoxes(){
     this.filterCheckBoxes.clear();
     this.totalProducts.forEach((item, index) => {
-      if (!this.filterCheckBoxes.has(item[this.filterProperty.toLowerCase()]))
+      if (!this.filterCheckBoxes.has(item[this.filterProperty.toLowerCase()]) && item[this.filterProperty.toLocaleLowerCase()])
         this.filterCheckBoxes.set(item[this.filterProperty.toLowerCase()], false);
     });
     this.sortFilters();

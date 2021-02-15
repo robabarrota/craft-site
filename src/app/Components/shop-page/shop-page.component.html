@@ -14,7 +14,10 @@
                     <a (click)="viewDetails(product.id)" class="product-image"><img class="card-img-top" [src]="product.images[0]" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a (click)="viewDetails(product.id)" class="product-details-link">{{product.pattern}}</a>
+                        <a (click)="viewDetails(product.id)" class="product-details-link">
+                            <span ng-if="product.pattern">{{product.pattern}}</span>
+                            <span ng-if="product.scent">{{product.scent}}</span>
+                        </a>
                         </h4>
                     </div>
                     <div class="card-footer">

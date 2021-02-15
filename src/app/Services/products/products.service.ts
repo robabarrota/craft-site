@@ -34,7 +34,11 @@ export class ProductsService {
     return this.productdata.filter(p => p.type == 'Mask');
   }
 
-  getFilterableProperties() : ProductProperty[] {
-    return this.productproperties.filter(p => p.filterable == true);
+  getCandleData() : Product[] {
+    return this.productdata.filter(p => p.type == 'Candle');
+  }
+
+  getFilterableProperties(productType) : ProductProperty[] {
+    return this.productproperties.filter(p => (p.filterable == true && p.applicableToTypes.includes(productType)));
   }
 }

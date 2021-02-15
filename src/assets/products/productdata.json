@@ -109,5 +109,15 @@
             "../assets/images/p8.png"
         ],
         "pattern": "Crossbones"
+    },
+    {
+        "id": 9,
+        "type": "Candle",
+        "colour": "Pink",
+        "price": "12",
+        "images": [
+            "../assets/images/pink_lady_candle.png"
+        ],
+        "scent": "Vanilla"
     }
 ]
