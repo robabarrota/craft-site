@@ -43,7 +43,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .carousel-height {
-  height: 280px !important;
+  height: 192px !important;
+}
+@media only screen and (min-width: 420px) {
+  .carousel-height {
+    height: 280px !important;
+  }
 }
 
 .bar {

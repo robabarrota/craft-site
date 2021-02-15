@@ -63,6 +63,16 @@
         left: 0;
         top: 0;
     }
+    @media only screen and (min-width: 770px) {
+        &.next {
+            right: 15vw;
+            top: 0;
+        }
+        &.prev {
+            left: 15vw;
+            top: 0;
+        }
+    }
 }
 
 /* style the arrows */
