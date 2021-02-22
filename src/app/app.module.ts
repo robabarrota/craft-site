@@ -18,6 +18,8 @@ import { FilterWidgetComponent } from './Components/filter-widget/filter-widget.
 import { ProductDetailsComponent } from './Components/product-details/product-details.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FaqComponent } from './Components/faq/faq.component';
+import { TermsConditionsComponent } from './Components/terms-conditions/terms-conditions.component';
+import { PrivacyPolicyComponent } from './Components/privacy-policy/privacy-policy.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { FaqComponent } from './Components/faq/faq.component';
     HomeComponent,
     FilterWidgetComponent,
     ProductDetailsComponent,
-    FaqComponent
+    FaqComponent,
+    TermsConditionsComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
