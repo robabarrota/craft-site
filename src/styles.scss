@@ -54,3 +54,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .bar {
   background-color: darkgray;
 }
+
+.box-shadow {
+  box-shadow: 6px 11px 5px -4px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
