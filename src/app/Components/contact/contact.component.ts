@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PropertiesService } from '../../Services/properties/properties.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  mailTo = 'mailto:contact@laurascrunchyshop.com';
-  constructor() { }
+  emailContact = "";
+  instagramContact = "";
+  shopContact = "";
+  constructor(private propertiesService: PropertiesService) { }
 
   ngOnInit() {
-    
+    this.emailContact = this.propertiesService.getEmailContact();
+    this.instagramContact = this.propertiesService.getInstagramContact();
+    this.shopContact = this.propertiesService.getShopContact();
   }
 }
