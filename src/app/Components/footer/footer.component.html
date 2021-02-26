@@ -1,27 +1,17 @@
 <footer class="bar footer">
   <nav class="navbar navbar-expand-lg navbar-dark bar fixed-bottom">
-    <div class="container">
+    <div class="container footer-container">
+      <p class="m-0 text-center text-white footer-link nav-link" inline="true">
+        Copyright &copy; Robert Abarrota 2020
+      </p>
 
-      <!-- <p class="m-0 text-center text-white" inline="true">Copyright &copy; Robert Abarrota 2020</p>
+      <a class="m-0 text-center text-white footer-link nav-link" inline="true" [routerLink]="['/TermsConditions']">
+        Terms & Conditions
+      </a>
 
-      <p class="m-0 text-center text-white" inline="true">Terms & Conditions</p>
-
-      <p class="m-0 text-center text-white" inline="true">Privacy Policy</p> -->
-      <table class="collapse navbar-collapse footer-table" id="navbarResponsive">
-        <tr class="navbar-nav footer-tr">
-            <td class="nav-item footer-td">
-              <p class="m-0 text-center nav-link" inline="true">Copyright &copy; Robert Abarrota 2020</p>
-            </td>
-            <td class="nav-item footer-td">
-              <a class="m-0 text-center nav-link" [routerLink]="['/TermsConditions']" inline="true">Terms & Conditions</a>
-            </td>
-            <td class="nav-item footer-td">
-              <a class="m-0 text-center nav-link" [routerLink]="['/PrivacyPolicy']" inline="true">Privacy Policy</a>
-            </td>
-          </tr>
-        </table>
+      <a class="m-0 text-center text-white footer-link nav-link" inline="true" [routerLink]="['/PrivacyPolicy']">
+        Privacy Policy
+      </a>
     </div>
   </nav>
-  
-  <!-- /.container -->
 </footer>
