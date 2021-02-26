@@ -28,7 +28,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .cdk-overlay-pane.my-dialog {
   position: relative!important;
-  padding-top: 15px;
+  padding-top: 1rem;
+  overflow-y: hidden;
 }
 .close.mat-button {
   top: -15px;

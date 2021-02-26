@@ -102,12 +102,12 @@ export class ShopPageComponent implements OnInit {
     this.router.navigate([this.router.url]);
   }
 
-  viewDetails(pid: number) {
+  viewDetails(imagePath: string) {
     let dialogRef = this.dialog.open(ProductDetailsComponent, {
-      height: '80%',
-      width: '80%',
+      height: 'auto',
+      width: '90%',
       data: {
-        pid: pid
+        imagePath: imagePath
       },
       panelClass: 'my-dialog'
     });

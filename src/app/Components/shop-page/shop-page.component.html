@@ -17,10 +17,10 @@
             
             <div *ngFor="let product of displayProducts; let i = index" class="col-lg-4 col-md-6 mb-4 shop-product">
                 <div class="card h-100 box-shadow">
-                    <a (click)="viewDetails(product.id)" class="product-image"><img class="card-img-top" [src]="product.images[0]" alt=""></a>
+                    <a (click)="viewDetails(product.images[0])" class="product-image"><img class="card-img-top" [src]="product.images[0]" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                        <a (click)="viewDetails(product.id)" class="product-details-link">
+                        <a (click)="viewDetails(product.images[0])" class="product-details-link">
                             <span ng-if="product.pattern">{{product.pattern}}</span>
                             <span ng-if="product.scent">{{product.scent}}</span>
                         </a>
