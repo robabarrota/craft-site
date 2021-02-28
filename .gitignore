@@ -46,3 +46,4 @@ testem.log
 Thumbs.db
 TODO.txt
 src/assets/properties.json
+deployment-scripts/deploy.command
