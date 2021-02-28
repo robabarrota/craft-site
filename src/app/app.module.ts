@@ -21,7 +21,11 @@ import { FaqComponent } from './Components/faq/faq.component';
 import { TermsConditionsComponent } from './Components/terms-conditions/terms-conditions.component';
 import { PrivacyPolicyComponent } from './Components/privacy-policy/privacy-policy.component';
 
-
+declare global {
+  interface Window {
+      opera:any;
+  }
+}
 @NgModule({
   declarations: [
     AppComponent,
