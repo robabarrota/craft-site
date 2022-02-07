@@ -6,7 +6,7 @@
         "material": "Cotton",
         "price": "5",
         "images": [
-            "../assets/images/p0.png"
+            "./assets/images/p0.png"
         ],
         "pattern": "Leaves"
     }, 
@@ -17,7 +17,7 @@
         "material": "Polyester-Spandex",
         "price": "5",
         "images": [
-            "../assets/images/p1.png"
+            "./assets/images/p1.png"
         ],
         "pattern": "Floral"
     },
@@ -28,7 +28,7 @@
         "material": "Flannel",
         "price": "5",
         "images": [
-            "../assets/images/p2.png"
+            "./assets/images/p2.png"
         ],
         "pattern": "Flannel"
     }, 
@@ -39,7 +39,7 @@
         "material": "Cotton",
         "price": "5",
         "images": [
-            "../assets/images/p3.png"
+            "./assets/images/p3.png"
         ],
         "pattern": "Floral"
     }, 
@@ -50,7 +50,7 @@
         "material": "Cotton",
         "price": "5",
         "images": [
-            "../assets/images/p4.png"
+            "./assets/images/p4.png"
         ],
         "pattern": "Leaves"
     },
@@ -61,7 +61,7 @@
         "material": "Polyester-Spandex",
         "price": "5",
         "images": [
-            "../assets/images/TESTIMAGEBLUE.png"
+            "./assets/images/TESTIMAGEBLUE.png"
 
         ],
         "pattern": "Floral"
@@ -73,7 +73,7 @@
         "material": "Cotton",
         "price": "5",
         "images": [
-            "../assets/images/p6.png"
+            "./assets/images/p6.png"
         ],
         "pattern": "Paw-print"
     },
@@ -84,7 +84,7 @@
         "material": "Cotton",
         "price": "5",
         "images": [
-            "../assets/images/p7.png"
+            "./assets/images/p7.png"
         ],
         "pattern": "Dinosaur"
     },
@@ -95,7 +95,7 @@
         "material": "Cotton",
         "price": "5",
         "images": [
-            "../assets/images/p8.png"
+            "./assets/images/p8.png"
         ],
         "pattern": "Crossbones"
     },
@@ -106,7 +106,7 @@
         "material": "Cotton",
         "price": "10",
         "images": [
-            "../assets/images/p8.png"
+            "./assets/images/p8.png"
         ],
         "pattern": "Crossbones"
     },
@@ -116,7 +116,7 @@
         "colour": "Pink",
         "price": "12",
         "images": [
-            "../assets/images/pink_lady_candle.png"
+            "./assets/images/pink_lady_candle.png"
         ],
         "scent": "Vanilla"
     }
