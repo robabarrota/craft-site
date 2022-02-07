@@ -1,0 +1,45 @@
+[
+    {
+        "id": 0,
+        "name": "Type",
+        "filterable": true,
+        "applicableToTypes": ["All"]
+    }, 
+    {
+        "id": 1,
+        "name": "Colour",
+        "filterable": true,
+        "applicableToTypes": ["Masks", "Scrunchies", "Bandanas", "Pouches", "Candles", "All"]
+    }, 
+    {
+        "id": 2,
+        "name": "Material",
+        "filterable": true,
+        "applicableToTypes": ["Masks", "Scrunchies", "Bandanas", "Pouches", "All"]
+    }, 
+    {
+        "id": 3,
+        "name": "Price",
+        "filterable": false,
+        "applicableToTypes": ["Masks", "Scrunchies", "Bandanas", "Pouches", "Candles", "All"]
+    }, 
+    {
+        "id": 4,
+        "name": "Images",
+        "filterable": false,
+        "applicableToTypes": []
+    }, 
+    {
+        "id": 5,
+        "name": "Pattern",
+        "filterable": true,
+        "applicableToTypes": ["Masks", "Scrunchies", "Bandanas", "Pouches","All"]
+    },
+
+    {
+        "id": 6,
+        "name": "Scent",
+        "filterable": true,
+        "applicableToTypes": ["Candles", "All"]
+    }
+]

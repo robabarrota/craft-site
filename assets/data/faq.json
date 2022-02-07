@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Are your products washer friendly?",
+        "answer": "Yes! All the fabrics I use are safe for the washer, but air dry only!",
+        "longQuestion": false
+    },
+    {
+        "question": "Do you do customized items?",
+        "answer": "Reach out to me and I'll see what I can do!",
+        "longQuestion": false
+    },
+    {
+        "question": "Will your mask elastics work for me?",
+        "answer": "The elastics are strong enough for all hair styles!",
+        "longQuestion": false
+    },
+    {
+        "question": "I see something I like, but I'm not sure if it's the size I would like. Are there other options?",
+        "answer": "I offer most of my products in different sizes!",
+        "longQuestion": true
+    }
+]
