@@ -1,0 +1,123 @@
+[
+    {
+        "id": 0,
+        "type": "Pouch",
+        "colour": "White",
+        "material": "Cotton",
+        "price": "5",
+        "images": [
+            "../assets/images/p0.png"
+        ],
+        "pattern": "Leaves"
+    }, 
+    {
+        "id": 1,
+        "type": "Pouch",
+        "colour": "Blue",
+        "material": "Polyester-Spandex",
+        "price": "5",
+        "images": [
+            "../assets/images/p1.png"
+        ],
+        "pattern": "Floral"
+    },
+    {
+        "id": 2,
+        "type": "Pouch",
+        "colour": "Red",
+        "material": "Flannel",
+        "price": "5",
+        "images": [
+            "../assets/images/p2.png"
+        ],
+        "pattern": "Flannel"
+    }, 
+    {
+        "id": 3,
+        "type": "Scrunchy",
+        "colour": "Yellow-Green",
+        "material": "Cotton",
+        "price": "5",
+        "images": [
+            "../assets/images/p3.png"
+        ],
+        "pattern": "Floral"
+    }, 
+    {
+        "id": 4,
+        "type": "Scrunchy",
+        "colour": "White",
+        "material": "Cotton",
+        "price": "5",
+        "images": [
+            "../assets/images/p4.png"
+        ],
+        "pattern": "Leaves"
+    },
+    {
+        "id": 5,
+        "type": "Scrunchy",
+        "colour": "Blue",
+        "material": "Polyester-Spandex",
+        "price": "5",
+        "images": [
+            "../assets/images/TESTIMAGEBLUE.png"
+
+        ],
+        "pattern": "Floral"
+    },
+    {
+        "id": 6,
+        "type": "Bandana",
+        "colour": "Red",
+        "material": "Cotton",
+        "price": "5",
+        "images": [
+            "../assets/images/p6.png"
+        ],
+        "pattern": "Paw-print"
+    },
+    {
+        "id": 7,
+        "type": "Bandana",
+        "colour": "White",
+        "material": "Cotton",
+        "price": "5",
+        "images": [
+            "../assets/images/p7.png"
+        ],
+        "pattern": "Dinosaur"
+    },
+    {
+        "id": 7,
+        "type": "Bandana",
+        "colour": "Black",
+        "material": "Cotton",
+        "price": "5",
+        "images": [
+            "../assets/images/p8.png"
+        ],
+        "pattern": "Crossbones"
+    },
+    {
+        "id": 8,
+        "type": "Mask",
+        "colour": "Black",
+        "material": "Cotton",
+        "price": "10",
+        "images": [
+            "../assets/images/p8.png"
+        ],
+        "pattern": "Crossbones"
+    },
+    {
+        "id": 9,
+        "type": "Candle",
+        "colour": "Pink",
+        "price": "12",
+        "images": [
+            "../assets/images/pink_lady_candle.png"
+        ],
+        "scent": "Vanilla"
+    }
+]
