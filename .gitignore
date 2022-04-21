@@ -44,5 +44,4 @@ testem.log
 .DS_Store
 Thumbs.db
 TODO.txt
-src/assets/properties.json
 deployment-scripts/deploy.command
