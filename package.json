@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href 'https://robabarrota.github.io/craft-site/'",
+    "build": "ng build",
+    "build-gh": "ng build --prod --base-href 'https://robabarrota.github.io/craft-site/'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
