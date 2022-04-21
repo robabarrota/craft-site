@@ -1418,14 +1418,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PropertiesService", function() { return PropertiesService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _assets_properties_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../assets/properties.json */ "./src/assets/properties.json");
-var _assets_properties_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../../assets/properties.json */ "./src/assets/properties.json", 1);
+/* harmony import */ var src_assets_properties_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/assets/properties.json */ "./src/assets/properties.json");
+var src_assets_properties_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! src/assets/properties.json */ "./src/assets/properties.json", 1);
 
 
 
 let PropertiesService = class PropertiesService {
     constructor() {
-        this.properties = _assets_properties_json__WEBPACK_IMPORTED_MODULE_2__;
+        this.properties = src_assets_properties_json__WEBPACK_IMPORTED_MODULE_2__;
     }
     getEmailContact() {
         return this.properties.emailContact;

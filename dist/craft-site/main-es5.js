@@ -2566,19 +2566,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* harmony import */
 
 
-    var _assets_properties_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../../assets/properties.json */
+    var src_assets_properties_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! src/assets/properties.json */
     "./src/assets/properties.json");
 
-    var _assets_properties_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(
-    /*! ../../../assets/properties.json */
+    var src_assets_properties_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(
+    /*! src/assets/properties.json */
     "./src/assets/properties.json", 1);
 
     var PropertiesService = /*#__PURE__*/function () {
       function PropertiesService() {
         _classCallCheck(this, PropertiesService);
 
-        this.properties = _assets_properties_json__WEBPACK_IMPORTED_MODULE_2__;
+        this.properties = src_assets_properties_json__WEBPACK_IMPORTED_MODULE_2__;
       }
 
       _createClass(PropertiesService, [{
